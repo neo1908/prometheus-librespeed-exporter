@@ -15,6 +15,7 @@ RUN export ARCH=$(apk info --print-arch) && \
 	case "$ARCH" in \
 		x86) _arch=386 ;; \
 		x86_64) _arch=amd64 ;; \
+		aarch64) _arch=arm64;; \
 		*) _arch=$ARCH ;; \
 	esac && \
 	echo _arch=$_arch && \
@@ -31,6 +32,7 @@ RUN export ARCH=$(apk info --print-arch) && \
 		x86) _arch=386 ;; \
 		x86_64) _arch=amd64 ;; \
 		armhf) _arch=armv7 ;; \
+		aarch64) _arch=arm64;; \
 		*) _arch=$ARCH ;; \
 	esac && \
 	echo _arch=$_arch && \
